@@ -1,4 +1,15 @@
 # opentelemtry_whit_minikube_Values_personnalis-
+Namespace: otel-demo26
+
+Fichier de valeurs : my-values-file.yaml
+
+Ce dépôt contient une configuration prête à l'emploi pour déployer la démo OpenTelemetry sur Minikube avec une configuration personnalisée du collecteur OpenTelemetry, ainsi qu'un PVC pour l'exportation de fichiers.
+
+Exportateurs activés : OpenSearch, Prometheus (HTTP OTLP + scraping), Jaeger/OTLP, Zipkin et File (via PVC).
+
+Tempo est facultatif (non installé par défaut). 
+
+Instructions ci-dessous:
 
 1) Prérequis
 
