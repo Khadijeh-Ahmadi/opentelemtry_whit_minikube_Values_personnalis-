@@ -1,0 +1,1 @@
+# opentelemtry_whit_minikube_Values_personnalis-
