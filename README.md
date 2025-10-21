@@ -3,9 +3,10 @@
 1) Prérequis
 
    Linux (testé sur Ubuntu 24.04)
+   
    Docker, kubectl, Helm v3+, Minikube
 
-2) Démarrer Minikube
+3) Démarrer Minikube
    minikube start \
    --driver=docker \
    --memory=24720 \
@@ -14,11 +15,11 @@
    --addons=ingress,metrics-server \
    --kubernetes-version=stable
 
-3) Créer le namespace et la PVC
+4) Créer le namespace et la PVC
    kubectl create namespace otel-demo26
    kubectl apply -n otel-demo26 -f otel-file-export-pvc.yaml
 
-4) Ajouter le repo Helm et déployer le demo
+5) Ajouter le repo Helm et déployer le demo
    helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
    helm repo update
 
@@ -27,7 +28,7 @@
     -f my-values-file.yaml
 
 
-5) Vérifier
+6) Vérifier
 
    kubectl get pods -n otel-demo26
    kubectl logs -n otel-demo26 deploy/otel-collector --tail=100
