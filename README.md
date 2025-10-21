@@ -27,7 +27,15 @@ Instructions ci-dessous:
    --addons=ingress,metrics-server \
    --kubernetes-version=stable
 
-5) Créer le namespace et la PVC
+ 4) Vous avez installé Tempo ( avec namespace = trzcing) , paramètres de l'exportateur : 
+
+   exporters:
+     "otlp/tempo":
+       endpoint: my-tempo.tracing.svc.cluster.local:4317
+       tls:
+         insecure: true
+
+6) Créer le namespace et la PVC
    
    kubectl create namespace otel-demo26
    kubectl apply -n otel-demo26 -f otel-file-export-pvc.yaml
